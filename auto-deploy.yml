@@ -1,0 +1,15 @@
+name: Scheduled Auto Deploy
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Runs every hour
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Bolt Build Hook
+        run: |
+          curl -X POST -H "Content-Type: application/json" ${{ secrets.BOLT_BUILD_HOOK_URL }}
+        env:
+          BOLT_BUILD_HOOK_URL: ${{ secrets.BOLT_BUILD_HOOK_URL }}

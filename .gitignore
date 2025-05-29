@@ -1,0 +1,6 @@
+git rm --cached src/credentials/wow-service-account.json
+echo "src/credentials/wow-service-account.json" >> .gitignore
+git commit -m "Remove sensitive file and add to .gitignore"
+pip install git-filter-repo
+git filter-repo --path src/credentials/wow-service-account.json --invert-paths
+git push origin main --force

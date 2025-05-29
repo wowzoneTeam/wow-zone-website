@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="WOW ZONE - The first immersive experiential playground in Egypt" />
+    <!-- دعم PWA (اختياري) -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="WOW Zone" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- تحسين الأداء -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+
+    <title>WOW ZONE</title>
+    <script type="module" crossorigin src="/assets/index-5onnTdmb.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-D4m2GXLd.js">
+    <link rel="modulepreload" crossorigin href="/assets/router-DL54j0ah.js">
+    <link rel="modulepreload" crossorigin href="/assets/supabase-DLmDS6yv.js">
+    <link rel="modulepreload" crossorigin href="/assets/ui-BMOZEaAI.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-C0natfoP.css">
+  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+  <body class="min-h-screen bg-black text-white">
+    <div id="root" class="container mx-auto"></div>
+    <!-- تفعيل Service Worker لـ PWA (اختياري) -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(err => {
+            console.log('Service Worker registration failed:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
